@@ -78,11 +78,10 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest, ItemApiResp
 
     @Override
     public Header delete(Long id) {
-        baseRepository.findById(id)
+        return baseRepository.findById(id)
                 .map(item-> {baseRepository.delete(item);
                 return Header.OK();})
                 .orElseGet(()->Header.ERROR("데이터 없음"));
-        return null;
     }
 
     @Override

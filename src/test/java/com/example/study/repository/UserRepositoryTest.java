@@ -64,7 +64,7 @@ public class UserRepositoryTest  {
         User u=User.builder().account(account).email(email).password(password).build();
     }
     @Test
-    @Transactional
+   // @Transactional
     //public User read(@RequestParam Long id)
     public void read(){
 
